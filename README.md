@@ -1,4 +1,4 @@
 # agiliway.com
-Run npm i
-After install gulp
-Open http://localhost:8000/index.html
+# Run npm i
+# After install gulp
+# Open http://localhost:8000/index.html
