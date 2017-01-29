@@ -1,0 +1,94 @@
+.nav-menu {
+  background-color: $white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 2;
+    &-item {
+      color: $black;
+      text-transform: capitalize;
+      font-size: 16px;
+      border: 1px solid $whisper;
+      border-width: 0 1px 0 0;
+      &:first-child {
+        border-width: 0 1px 0 1px;
+      }
+      &__link {
+        color: $black;
+        display: block;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 19px 15px;
+            &:hover {
+          color: $black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__store {
+    border: 1px solid $gray-line;
+    border-width: 0 1px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+  }
+}
+.store {
+  &__favorite-link,
+  &__cart-link {
+    border: 1px solid $gray-line;
+    border-width: 0 1px 0 0;
+    padding: 20px 20px 20px 0;
+    &:last-child {
+      border-width: 0;
+      padding: 20px 0 20px 20px;
+    }
+    &__counter {
+      border-radius: 4px;
+      color: $white;
+      display: inline-block;
+      min-width: 20px;
+      height: 20px;
+      text-align: center;
+      margin: 0 5px;
+    }
+    &:before {
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &__favorite-link {
+    &__counter {
+      background-color: $gray;
+    }
+    &:before {
+      background-image: svg-load('./../img/svg/star.svg', fill=$gray-icon, stroke=$gray-icon);
+    }
+  }
+  &__cart-link {
+    &__counter {
+      background-color: $green;
+    }
+    &:before {
+      color: $gray-icon;
+      background-image: svg-load('./../img/svg/empty-cart.svg', fill=$gray-icon, stroke=$gray-icon);
+    }
+  }
+}

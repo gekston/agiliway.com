@@ -1,0 +1,126 @@
+.store {
+  background-color: $wild-sand;
+  padding: 30px 0 0 0;
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    &-text {
+      margin: 0;
+    }
+    &-show-item {
+      border: 1px solid $tea;
+      background: none;
+      color: $tea;
+      padding: 5px 15px;
+    }
+  }
+  &__items {
+    &-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  &__list-item {
+    background-color: $white;
+    margin: 35px 0;
+    position: relative;
+    &_title {
+      border-top: 1px solid $gray-line;
+      padding: 0 10px 0 90px;
+      position: relative;
+      line-height: 48px;
+      &--price {
+        background-color: $green;
+        color: $white;
+        display: inline-block;
+        position: absolute;
+        text-align: center;
+        min-width: 67px;
+        left: 10px;
+        top: -18px;
+        padding: 10px 0;
+        }
+      &--brand {
+        display: block;
+        font-size: 18px;
+        width: 100%;
+      }
+      &--out,
+      &--sale {
+        color: $white;
+        position: absolute;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        top: 0;
+        right: 13px;
+      }
+      &--out {
+        background-color: $crusta;
+        padding: 15px 9px;
+      }
+      &--sale {
+        background-color: $black;
+        padding: 25px 5px;
+      }
+      &:hover {
+        .store__list-item_title--brand {
+          display: none;
+        }
+        .store__list-item_title--action {
+          display: flex;
+        }
+      }
+      &--action {
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        height: 48px;
+        padding: 0;
+        list-style-type: none;
+        &:hover {
+          display: flex;
+        }
+        &-item {
+          &__link {
+            display: block;
+            &:after {
+              background-repeat: no-repeat;
+              background-size: contain;
+              content: '';
+              color: $gray;
+              display: block;
+              width: 20px;
+            }
+          }
+          &-watch:after {
+            background-image: svg-load('./../img/svg/eye.svg', fill=$gray, stroke=$gray);
+            height: 13px;
+          }
+          &-favorite:after {
+            background-image: svg-load('./../img/svg/star.svg', fill=$gray, stroke=$gray);
+            height: 17px;
+          }
+          &-share:after {
+            background-image: svg-load('./../img/svg/share.svg', fill=$gray, stroke=$gray);
+            height: 17px;
+          }
+          &-cart:after {
+            background-image: svg-load('./../img/svg/cart.svg', fill=$green, stroke=$green);
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}

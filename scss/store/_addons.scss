@@ -1,0 +1,71 @@
+.addon {
+  padding: 0 50px 25px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &__shipping,
+  &__testimon,
+  &__blog {
+    background-color: $merino;
+    padding: 0;
+    margin: 0 0 0 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    &-title {
+      color: $black;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 15px 0;
+    };
+    &-author {
+      font-style: italic;
+    }
+  }
+  &__shipping {
+    flex-shrink: 5;
+    margin: 0;
+  }
+  &__testimon {
+    flex-shrink: 5;
+  }
+  &__blog {
+    flex-grow: 2;
+    flex-basis: 50%;
+    &-list {
+      list-style-type: none;
+      padding: 0;
+      &__item {
+        display: flex;
+        flex-direction: row;
+        padding: 0 0 15px 0;
+        &:last-child {
+          padding: 0;
+        }
+        &-date {
+          background-color: $logo-color;
+          color: $white;
+          min-width: 36px;
+          height: 36px;
+          text-align: center;
+          text-transform: uppercase;
+          font-weight: 600;
+          margin-right: 10px;
+          padding: 4px 0 0 0;
+          font-size: 10px;
+        }
+        &-news {
+          display: flex;
+          flex-direction: column;
+          &__title {
+            font-size: 14px;
+            font-weight: 600;
+          }
+          &__body {}
+        }
+      }
+    }
+  }
+}

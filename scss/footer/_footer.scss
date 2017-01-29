@@ -1,0 +1,59 @@
+.widgets {
+  background-color: $black;
+  border: 1px solid $nero;
+  border-width: 0 0 1px 0;
+  color: darken($white, 35%);
+  padding: 50px 0 30px 0;
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &-item {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 30%;
+      padding: 0 10px;
+      &__title {
+        color: $gray-icon;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 0 0 25px 0;
+      }
+      &__text {}
+      &-tweet {
+        list-style-type: none;
+        padding: 0;
+        &__item {
+          display: flex;
+          flex-direction: column;
+          padding: 10px 0 0 0;
+          &:first-child {
+            padding: 0;
+          }
+          &-text {
+            a {
+              color: $green;
+            }
+          }
+          &-date {
+            color: $harp;
+            font-style: italic;
+            padding: 10px 0 0 0;
+          }
+        }
+      }
+      &__flikr {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        list-style-type: none;
+        padding: 0;
+        &-item {
+          margin: 5px;
+        }
+      }
+    }
+  }
+}

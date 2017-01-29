@@ -1,0 +1,58 @@
+.logo-header {
+  background-color: $black;
+  line-height: 1.8;
+  &__wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.logo {
+  color: $logo-color;
+  font-size: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  &:hover {
+    color: $logo-color;
+    text-decoration: none;
+  }
+}
+.sign {
+  border-right: 1px solid $dark-gray;
+  color: $gray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 2;
+  font-size: 11px;
+  text-align: right;
+  padding: 0 20px 0 0;
+  &__login,
+  &__register {
+    color: $gray;
+    text-transform: uppercase;
+    &:hover {
+      color: $gray;
+      text-decoration: none;
+    }
+  }
+  &__search {
+    border: 0;
+    background-color: inherit;
+    border-right: 1px solid $dark-gray;
+    padding: 18px 20px 15px 0;
+    margin: 0 20px 0 0;
+    vertical-align: text-top;
+    &:before {
+      background-image: svg-load('./../img/svg/search.svg', fill=$gray-icon, stroke=$gray-icon);
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '';
+      display: block;
+      width: 11px;
+      height: 11px;
+    }
+  }
+}
